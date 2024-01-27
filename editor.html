@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Degree Web Studio</title>
+    <link rel="stylesheet" href="https://unpkg.com/grapesjs/dist/css/grapes.min.css">
+    <script src="https://unpkg.com/grapesjs"></script>
+    <script src="https://unpkg.com/grapesjs-preset-webpage"></script>
+    <script src="https://unpkg.com/grapesjs-blocks-basic"></script>
+    <script src="https://unpkg.com/grapesjs-plugin-export"></script>
+    <script src="https://unpkg.com/grapesjs-tui-image-editor"></script>
+    <script src="https://unpkg.com/grapesjs-navbar"></script>
+    <script src="https://unpkg.com/grapesjs-plugin-forms"></script>
+    <script src="https://unpkg.com/grapesjs-component-countdown"></script>
+    <script src="https://unpkg.com/grapesjs-blocks-flexbox"></script>
+    <script src="https://unpkg.com/grapesjs-tabs"></script>
+    <script src="https://unpkg.com/grapesjs-tooltip"></script>
+    <script src="https://unpkg.com/grapesjs-touch"></script>
+    <script src="https://unpkg.com/grapesjs-custom-code"></script>
+    <script src="https://unpkg.com/@silexlabs/grapesjs-fonts"></script>
+    <script src="https://unpkg.com/grapesjs-preset-newsletter"></script>
+    <script src="https://unpkg.com/grapesjs-ui-suggest-classes"></script>
+    <script src="https://unpkg.com/@silexlabs/grapesjs-symbols"></script>
+    <script src="https://unpkg.com/grapesjs-parser-postcss"></script>
+    <script src="https://unpkg.com/grapesjs-plugin-toolbox"></script>
+    <script src="https://unpkg.com/grapesjs-script-editor"></script>
+    <script src="https://unpkg.com/grapesjs-user-blocks"></script>
+    <script src="https://unpkg.com/grapesjs-style-filter"></script>
+    <script src="https://unpkg.com/grapesjs-tailwind"></script>
+    <link href="https://unpkg.com/grapesjs-rte-extensions/dist/grapesjs-rte-extensions.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/grapesjs-rte-extensions"></script>
+    <script src="https://unpkg.com/grapesjs-zoom-plugin"></script>
+    <link href="https://unpkg.com/grapesjs-rulers/dist/grapesjs-rulers.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/grapesjs-rulers"></script>
+    <link href="https://unpkg.com/grapesjs-uppy/dist/grapesjs-uppy.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/grapesjs-uppy"></script>
+    <script src="https://unpkg.com/grapesjs-typed"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+      }
+
+      /* Let's highlight canvas boundaries */
+      #gjs {
+        border: 3px solid #444;
+      }
+
+      .gjs-one-bg {
+        background-color: #000000;
+      }
+
+      /* Secondary color for the text color */
+      .gjs-two-color {
+        color: #ffffb3;
+      }
+
+      /* Tertiary color for the background */
+      .gjs-three-bg {
+        background-color: #ec5896;
+      }
+
+      /* Quaternary color for the text color */
+      .gjs-four-color,
+      .gjs-four-color-h:hover {
+        color: #ec5896;
+      }
+
+      /* Reset some default styling */
+      .gjs-cv-canvas {
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .gjs-block {
+        width: auto;
+        height: auto;
+        min-height: auto;
+      }
+      .panel__top {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        position: initial;
+        justify-content: center;
+        justify-content: space-between;
+      }
+      .panel__basic-actions {
+        position: initial;
+      }
+      .editor-row {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        height: 300px;
+      }
+
+      .editor-canvas {
+        flex-grow: 1;
+      }
+
+      .panel__right {
+        flex-basis: 230px;
+        position: relative;
+        overflow-y: auto;
+      }
+
+      .panel__switcher {
+        position: initial;
+      }
+      .panel__devices {
+        position: initial;
+      }
+    </style>
+  </head>
+
+  <body class="bg-black">
+    
+    <div id="gjs">
+      <div class="mt-14">
+        <div class="m-4">
+          <img class="mt-2 w-40" src="logo.png" />
+          <h1 class="m-4 font-bold text-4xl">Welcome to Degree Web Studio</h1>
+          <p class="m-4">
+             The webite editor run directly on your browser
+          </p>
+          <div>
+            <button class="m-4 text-white font-bold bg-black px-6 py-4 rounded-full">Start Now!</button>
+          </div>
+          
+        </div>
+        <div class="m-4 rounded-lg bg-black">
+          <div class="p-8 text-white">
+            <h1 class="mb-4 font-bold text-3xl leading-none">Build for the next generation of web building</h1>
+            <p class="tracking-tight mt-2 mb-4">Degree Web Studio is a web design and development studio that specializes in creating custom websites and web applications. Run directly on your browser, we provide a powerful and flexible web design and development platform that allows you to create and customize websites and web applications with ease. And then export source code as a .ZIP files. </p>
+            
+            <div class="mt-4">
+              <img class="rounded-md" src="webbuilding.jpg" />
+            </div>
+          </div>
+        </div>
+        <div class="h-20">
+          <p class="p-8">Copyright &#169; 2023 by Degree Family. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      
+      window.onload = () => {
+        window.editor = grapesjs.init({
+          height: '100%',
+          showOffsets: true,
+          noticeOnUnload: true,
+          storageManager: false,
+          container: '#gjs',
+          fromElement: true,
+          plugins: ['grapesjs-preset-webpage', 'gjs-blocks-basic', 'grapesjs-plugin-export', 'grapesjs-tui-image-editor', 'grapesjs-navbar', 'grapesjs-plugin-forms', 'grapesjs-component-countdown', 'grapesjs-blocks-flexbox', 'grapesjs-tabs', 'grapesjs-tooltip', 'grapesjs-touch', 'grapesjs-custom-code', 'grapesjs-preset-newsletter', 'grapesjs-ui-suggest-classes', '@silexlabs/grapesjs-symbols', 'grapesjs-parser-postcss', 'grapesjs-rulers', 'grapesjs-plugin-toolbox', 'grapesjs-script-editor', 'grapesjs-user-blocks', 'grapesjs-tailwind', 'grapesjs-rte-extensions', 'grapesjs-zoom-plugin', 'grapesjs-uppy', 'grapesjs-typed'],
+          pluginsOpts: {
+            'grapesjs-preset-webpage': {
+              blocks: ['link-block', 'quote', 'text-basic', 'image'],
+              modalImportTitle: 'Import HTML',
+              modalImportLabel: 'Import HTML code here',
+              modalImportButton: 'Import',
+              modalImportContent: '',
+              importViewerOptions: {},
+              textCleanCanvas: 'Are you sure to clean the canvas?',
+              modalImportContent: editor => editor.getHtml(),
+              showStylesOnChange: true,
+              useCustomTheme: true,
+            },
+            'gjs-blocks-basic': {
+              blocks: ['column1', 'column2', 'column3', 'column3-7', 'text', 'link', 'image', 'video', 'map'],
+              category: 'Basic',
+              flexGrid: true,
+              stylePrefix: 'dgr-',
+              addBasicStyle: true,
+              labelColumn1: '1 Column',
+              labelColumn2: '2 Column',
+              labelColumn3: '3 Column',
+              labelColumn37: '2 Columns 3/7',
+              labelText: 'Text',
+              labelLink: 'Link',
+              labelImage: 'Image',
+              labelVideo: 'Video',
+              labelMap: 'Map',
+              rowHeight: 75,
+            },
+            'grapesjs-plugin-export': {
+              addExportBtn: true,
+              btnLabel: 'Export to ZIP',
+              filenamePfx: 'degree-studio',
+              filename: editor => 'degree-studio-website.zip',
+            },
+            'grapesjs-tui-image-editor': {
+              config: {
+                includeUI: {
+                  initMenu: 'filter',
+                },
+              },
+              script: ['https://uicdn.toast.com/tui-color-picker/latest/tui-color-picker.js', 'https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.js'],
+              style: ['https://uicdn.toast.com/tui-color-picker/latest/tui-color-picker.css', 'https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.css'],
+              addToAssets: true,
+              hideHeader: true,
+            },
+            'grapesjs-navbar': {
+              id: 'navbar',
+              labella: 'Navbar',
+              block: {
+                category: 'Extra',
+              },
+              style: '',
+              styleAdditional: '',
+              classPrefix: 'navbar',
+            },
+            'grapesjs-plugin-forms': {
+              blocks: ['form', 'input', 'textarea', 'select', 'button', 'label', 'checkbox', 'radio'],
+              category: 'Forms'
+            },
+            'grapesjs-component-countdown': {
+              id: 'countdown',
+              label: 'Countdown',
+              block: { 
+                label: 'Countdown', 
+                category: 'Extra',
+              },
+              props: { 
+                name: 'Countdown', 
+                droppable: false, 
+              },
+              style: '',
+              styleAdditional: '',
+              classPrefix: 'countdown',
+              startTime: '',
+              endText: 'EXPIRED',
+              dateInputType: 'date',
+              labelDays: 'days',
+              labelHours: 'hours',
+              labelMinutes: 'minutes',
+              labelSeconds: 'seconds',
+              classPrefix: 'countdown',
+            },
+            'grapesjs-blocks-flexbox': {
+              stylePrefix: 'dgr-',
+              flexboxBlock: {
+                label: 'Flexbox', 
+                category: 'Extra',
+              },
+              labelRow: 'Row',
+              labelColumn: 'Column',
+            },
+            'grapesjs-tabs': {
+              tabsBlock: {},
+              tabsProps: {},
+              tabContainerProps: {},
+              tabProps: {},
+              tabContentProps: {},
+              tabContentsProps: {},
+              classTab: 'tab',
+              classTabContainer: 'tab-container',
+              classTabActive: 'tab-active',
+              classTabContent: 'tab-content',classTabContents: 'tab-contents',
+              selectorTab: 'aria-controls',
+              typeTabs: 'tabs',
+              typeTabContainer: 'tab-container',
+              typeTab: 'tab',
+              typeTabContent: 'tab-content',
+              typeTabContents: 'tab-contents',
+              templateTab: tab => '<span data-gjs-highlightable="false">Tab</span>',
+              templateTabContent: tab => '<div>Tab Content</div>',
+              style: (config) => `
+                .${config.classTab} {
+                    padding: 7px 14px;
+                    display: inline-block;
+                    border-radius: 3px;
+                    margin-right: 10px;
+                }
+
+                .${config.classTab}:focus {
+                    outline: none;
+                }
+
+                .${config.classTab}.${config.classTabActive} {
+                    background-color: #0d94e6;
+                    color: white;
+                }
+
+                .${config.classTabContainer} {
+                    display: inline-block;
+                }
+
+                .${config.classTabContent} {
+                    animation: fadeEffect 1s;
+                }
+
+                .${config.classTabContents} {
+                    min-height: 100px;
+                    padding: 10px;
+                }
+
+                @keyframes fadeEffect {
+                    from {opacity: 0;}
+                    to {opacity: 1;}
+                }
+              `,
+              
+            },
+            'grapesjs-tooltip': {
+              id: 'tooltip',
+              labelTooltip: 'Tooltip',
+              blockTooltip: { 
+                label: 'Tooltip', 
+                category: 'Extra'
+              },
+              propsTooltip: { 
+                name: 'Tooltip', 
+                droppable: false
+              },
+              extendTraits: traits => traits,
+              attrTooltip: 'data-tooltip',
+              classTooltip: 'tooltip-component',
+              style: '',
+              styleAdditional: '',
+              privateClasses: true,
+              showTooltipOnStyle: true,
+              stylableTooltip: ['color', 'background-color']
+            },
+            'grapesjs-custom-code': {
+              blockCustomCode: { 
+                label: 'Custom Code', 
+                category: 'Extra' 
+              },
+              propsCustomCode: { 
+                name: 'Custom Code', 
+                components: '<span>Initial content</span>' 
+              },
+              toolbarBtnCustomCode: { 
+                label: '</>', 
+                attributes: { 
+                  title: 'Open custom code' 
+                },
+                placeholderScript: '// Custom code',
+                modalTitle: 'Insert your code',
+                codeViewOptions: { 
+                  theme: 'hopscotch', 
+                  readOnly: 0 
+                },
+                buttonLabel: 'Save',
+                commandCustomCode: { 
+                  getPreContent: () => '<div>Paste here</div>' 
+                }
+              }
+            },
+            'grapesjs-preset-newsletter': {
+              blocks: ['sect100', 'sect50', 'sect30', 'sect37', 'button', 'divider', 'text', 'text-sect', 'image', 'quote', 'grid-items', 'list-items'],
+              block: (blockId) => ({}),
+              cmdOpenImport: 'gjs-open-import-template',
+              cmdTglImages: 'gjs-toggle-images',
+              cmdInlineHtml: 'gjs-get-inlined-html',
+              modalTitleImport: 'Import HTML',
+              modalTitleExport: 'Export HTML',
+              modalLabelExport: 'Export your HTML Code',
+              modalLabelImport: 'Import your HTML code',
+              modalBtnImport: 'Import',
+              importPlaceholder: 'Paste your HTML here',
+              inlineCss: true,
+              updateStyleManager: true,
+              showStylesOnChange: true,
+              showBlocksOnLoad: true,
+              codeViewerTheme: 'hopscotch',
+              juiceOpts: {},
+              textCleanCanvas: 'Are you sure you want to clear the canvas?',
+              useCustomTheme: true,
+              cellStyle: { 
+                padding: 0, 
+                margin: 0, 
+                'vertical-align': 'top' 
+              },
+              tableStyle: { 
+                height: '150px', 
+                margin: '0 auto 10px auto', 
+                padding: '5px 5px 5px 5px', 
+                width: '100%' 
+              }
+            },
+            'grapesjs-ui-suggest-classes': {
+              enablePerformance: false,
+              enableCount: true,
+              containerStyle: `
+                .suggest {
+                  position: absolute;
+                  z-index: 999;
+                  padding: 0;
+                  margin: 0;
+                  left: 0;
+                  right: 0;
+                  transition: opacity .25s ease;
+                  text-align: left;
+                  padding: 0 5px;
+                }
+              `,
+              tagStyle: `
+                div.suggest__class {
+                  list-style: none;
+                  cursor: pointer;
+                  display: inline-block;
+                }
+                .suggest__count {
+                  vertical-align: baseline;
+                  font-size: x-small;
+                }
+              `,
+            },
+            '@silexlabs/grapesjs-symbols': {
+              appendTo: '.gjs-pn-views-container',
+            },
+            'grapesjs-rulers': {
+              dragMode: 'translate',
+              rulerHeight: 20,
+              canvasZoom: 94,
+              rulerOpts: {},
+            },
+            'grapesjs-plugin-toolbox': {
+              panels: false,
+              traitsInSm: true,
+              resizer: true,
+              hideOnZoom: true,
+              breadcrumbs: true,
+              labelGrid: 'Grid',
+              categoryGrid: 'Basic',
+              
+            },
+            'grapesjs-script-editor': {
+              starter: 'let el = this',
+              toolbarIcon: '<i class="fa fa-puzzle-piece"></i>',
+              scriptTypesSupport: ['default', 'wrapper', 'text', 'textnode', 'image', 'video', 'svg'],
+              toolbarBtnCustomScript: {},
+              onRun: () => console.log('valid syntax'),
+              onError: err => console.log('error:',err),
+              modalTitle: 'Script',
+              codeViewOptions: {},
+              buttonLabel: 'Save',
+              commandAttachScript: {}
+            },
+            'grapesjs-tailwind': {
+              tailwindPlayCdn: 'https://cdn.tailwindcss.com',
+              plugins: [],
+              config: {},
+              changeThemeText: 'Change theme',
+            },
+            'grapesjs-rte-extensions': {
+              // default options
+              base: {
+                bold: true,
+                italic: true,
+                underline: true,
+                strikethrough: true,
+                link: true,
+              },
+              fonts: {
+               fontName: true,
+               fontSize: true,
+               //An array of strings representing colors
+               fontColor: true,
+               hilite: true,
+              },
+              format: {
+                heading1: true,
+                heading2: true,
+                heading3: true,
+                heading4: true,
+                heading5: true,
+                heading6: true,
+                paragraph: true,
+                quote: true,
+                clearFormatting: true,
+              },
+              subscriptSuperscript: true,
+              indentOutdent: true,
+              list: true,
+              align: true,
+              actions: {
+               copy: true,
+               cut: true,
+               paste: true,
+               delete: true,
+              },
+              undoredo: true,
+              extra: true,
+              darkColorPicker: true,
+              maxWidth: '600px'
+            },
+            'grapesjs-zoom-plugin': {},
+            'grapesjs-uppy': {
+              btnEl: '.gjs-uppy-btn',
+              btnText: 'Add Image',
+              theme: 'dark',
+              uppyOpts: {
+                autoProceed: true,
+                allowMultipleUploadBatches: true,
+                debug: true,
+                restrictions: {
+                  maxFileSize: 5000000,
+                  minFileSize: 0,
+                  maxTotalFileSize: 5000000,
+                  maxNumberOfFiles: 5,
+                  minNumberOfFiles: 0,
+                  allowedFileTypes: ['image/*', '.jpg', '.jpeg', '.png', '.gif', '.mp3', '.mp4'],
+                  requiredMetaFields: [],
+                }
+              },
+              dashboardOpts: {},
+              companionUrl: 'https://companion.uppy.io',
+              endpoint: 'https://tusd.tusdemo.net/files/',
+              onComplete: console.log('Upload complete'),
+              onFailed: console.log('Upload failed'),
+              googledrive: true,
+              dropbox: true,
+              instagram: true,
+              facebook: true,
+              onedrive: true,
+              unsplash: true,
+              webcam: true,
+              screencapture: true,
+            },
+            'grapesjs-typed': {
+              script: 'https://cdn.jsdelivr.net/npm/typed.js@2.0.11',
+              block: { 
+                label: 'Typed' 
+              },
+              props: props => props,
+            }
+          }
+        });
+
+        const pn = editor.Panels;
+        const panelViews = pn.addPanel({
+          id: 'options'
+        });
+        panelViews.get('buttons').add([{
+          attributes: {
+            title: 'Toggle Rulers'
+          },
+          label: `<svg width="18" viewBox="0 0 16 16"><path d="M0 8a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5A.5.5 0 0 1 0 8z"/><path d="M4 3h8a1 1 0 0 1 1 1v2.5h1V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2.5h1V4a1 1 0 0 1 1-1zM3 9.5H2V12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9.5h-1V12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/></svg>`,
+          command: 'ruler-visibility',
+          id: 'ruler-visibility'
+        }]);
+      };
+      
+    </script>
+  </body>
+</html>
